@@ -1,0 +1,25 @@
+*{
+  margin:0;
+padding:0;
+
+}
+.bgimg {
+  background-image: url('https://source.unsplash.com/800x600/?Movies');
+  height: 100;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  position: fixed;
+  top: 80px;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.main{
+  h1{
+    color: white;
+  }
+}

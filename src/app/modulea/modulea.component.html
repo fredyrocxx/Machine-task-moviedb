@@ -1,0 +1,37 @@
+<div class="container">
+  <!-- card -->
+  <div
+    class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+    [scrollWindow]="false"
+  >
+    <div class="row pt-5">
+      <div class="col-md-4 p-2" *ngFor="let movie of movieList">
+        <!-- single post card -->
+        <div class="card shadow">
+          <!-- <img class="card-img-top" [src]="movie.poster_path" alt="Card image cap"> -->
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              {{ movie.title }}
+            </h5>
+            <p class="card-text"><b>Overview : </b> {{ movie.overview }}</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <b>Release Date: </b>{{ movie.release_date }}
+              </li>
+              <li class="list-group-item">
+                <b>Rating: </b>{{ movie.vote_average }}
+              </li>
+              <li class="list-group-item">
+                <b>Popularity: </b>{{ movie.popularity }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
